@@ -1,0 +1,34 @@
+.outerDiv {
+    border: 2px solid gray;
+    padding: 2px;
+    width: 250px;
+}
+.divRow {
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+
+}
+
+.divLabel {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    width: 64px;
+    justify-content: center;
+}
+
+.divInput {
+    border: 1px solid black;
+    padding: 6px;
+    margin-left: 2px;
+    width: 200px;
+    display: flex;
+}
+
+.divSelect {
+    padding: 2px;
+    border: 1px solid black;
+    margin-left: 2px;
+    width: 241px;
+}
