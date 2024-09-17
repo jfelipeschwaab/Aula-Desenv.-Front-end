@@ -1,36 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento Da bia</title>
+    <title>Form Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            margin: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        td {
+            padding: 5px;
+            border: 1px solid black
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <div style="flex-direction: row; display: flex; padding: 10px; border: 1px solid black; align-items: center;">
-            <label for="nome" style="margin-left: 10px; border: 1px solid black; padding: 11px">Nome</label>
-            <div style="border: 1px solid black; padding: 10px">
-                <input type="text" id="nome">
-            </div>
-        </div>
-        <div style="flex-direction: row; display: flex; padding: 10px; border: 1px solid black; align-items: center;">
-            <label for="sexo" style="margin-left: 10px; border: 1px solid black; padding: 11px">Sexo</label>
-            <div style="border: 1px solid black; padding: 10px">
-                <input type="radio" id="feminino">
-                <label for="feminino">Feminino</label>
-                <input type="radio" id="Masculino">
-                <label for="feminino">Masculino</label>
-            </div>
-        </div>
-        <div style="flex-direction: row; display: flex; padding: 10px; border: 1px solid black; align-items: center;">
-            <label for="escolaridade">Escolaridade:</label>
 
-            <select id="escolaridade" name="escolaridade"></select>
-                <option value="1grau">1° Grau</option>
-                <option value="2grau">2° Grau</option>
-                <option value="3grau">3° Grau</option>
-            </select>
-        </div>
-    </div>
+<form>
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td><input type="text" name="nome"></td>
+        </tr>
+        <tr>
+            <td>Sexo:</td>
+            <td>
+                <input type="radio" name="sexo" value="feminino"> Feminino
+                <input type="radio" name="sexo" value="masculino"> Masculino
+            </td>
+        </tr>
+        <tr>
+            <td>Escolaridade:</td>
+            <td>
+                <select name="escolaridade">
+                    <option value="1grau">1º Grau</option>
+                    <option value="2grau">2º Grau</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+
 </body>
 </html>
