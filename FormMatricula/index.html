@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escola Virtual - Formulário de Pré-Matrícula</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+        <form>
+            <fieldset style="width: 380px;">
+                <legend>Dados Pessoais:</legend>
+                <div class="form-group">
+                    <label for="nomeAluno">Nome do Aluno:</label>
+                    <input type="text" id="nomeAluno" name="nomeAluno">
+                </div>
+                <div class="form-group">
+                    <label for="nascimento">Nascimento (dd/mm/aaaa):</label>
+                    <input type="text" id="dia" name="dia" size="2" placeholder="DD"> /
+                    <input type="text" id="mes" name="mes" size="2" placeholder="MM"> /
+                    <input type="text" id="ano" name="ano" size="4" placeholder="AAAA">
+                </div>
+                <div class="form-group">
+                    <label for="nomeMae">Nome da Mãe:</label>
+                    <input type="text" id="nomeMae" name="nomeMae">
+                </div>
+                <div class="form-group">
+                    <label for="nomePai">Nome do Pai:</label>
+                    <input type="text" id="nomePai" name="nomePai">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="ddd" name="ddd" size="2" placeholder="DDD">
+                    <input type="text" id="tel" name="tel" placeholder="Telefone">
+                    <input type="text" id="ramal" name="ramal" size="4" placeholder="Ramal">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </fieldset>
+            
+            <fieldset style="width: 380px;">
+                <legend>Informações de Matrícula:</legend>
+                <div class="form-group">
+                    <label for="serie">Série:</label>
+                    <select id="serie" name="serie">
+                        <option value="pre-escolar">Pré-escolar</option>
+                        <option value="fundamental">Fundamental</option>
+                        <option value="medio">Médio</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Turno:</label>
+                    <input type="radio" id="manha" name="turno" value="manha">
+                    <label for="manha">Manhã</label>
+                    <input type="radio" id="tarde" name="turno" value="tarde">
+                    <label for="tarde">Tarde</label>
+                </div>
+                <div class="form-group">
+                    <label>Atividades Extracurriculares:</label><br>
+                    <input type="checkbox" id="informatica" name="atividades" value="informatica">
+                    <label for="informatica">Informática</label><br>
+                    <input type="checkbox" id="musica" name="atividades" value="musica">
+                    <label for="musica">Música</label><br>
+                    <input type="checkbox" id="ballet" name="atividades" value="ballet">
+                    <label for="ballet">Balé</label><br>
+                    <input type="checkbox" id="pintura" name="atividades" value="pintura">
+                    <label for="pintura">Pintura</label><br>
+                    <input type="checkbox" id="judo" name="atividades" value="judo">
+                    <label for="judo">Judô</label><br>
+                    <input type="checkbox" id="futebol" name="atividades" value="futebol">
+                    <label for="futebol">Futebol</label><br>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
