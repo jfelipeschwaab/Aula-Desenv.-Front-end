@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegação da Netflix com Pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo"></a>
+        </div>
+        <ul class="navbar__links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Novidades Populares</a></li>
+            <li><a href="#">Minha Lista</a></li>
+        </ul>
+        <div class="navbar__icons">
+            <div class="search-container">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+                <input type="text" class="search-input" id="search-input" placeholder="Título, pessoa, gênero...">
+                <i class="fas fa-times close-icon" id="close-icon"></i>
+            </div>
+            <a href="#"><i class="fas fa-bell"></i></a>
+            <a href="#"><img src="https://via.placeholder.com/30" alt="Perfil"></a>
+        </div>
+    </nav>
+
+    <div style="margin-top: 60px; padding: 20px;">
+        <h1>Bem-vindo ao meu Netflix Clone</h1>
+    </div>
+
+    <script>
+        const searchIcon = document.getElementById('search-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const searchInput = document.getElementById('search-input');
+
+        searchIcon.addEventListener('click', () => {
+            searchInput.classList.add('active');
+            closeIcon.classList.add('active');
+            searchIcon.classList.add('inactive');
+            searchInput.focus();
+        });
+
+        closeIcon.addEventListener('click', () => {
+            searchInput.classList.remove('active');
+            closeIcon.classList.remove('active');
+            searchIcon.classList.remove('inactive');
+            searchInput.value = '';
+        });
+    </script>
+</body>
+</html>

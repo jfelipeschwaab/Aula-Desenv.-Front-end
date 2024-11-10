@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(20, 20, 20, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar__logo img {
+    height: 30px;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar__links li a:hover {
+    color: #e50914;
+}
+
+.navbar__icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-icon, .close-icon {
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.search-icon:hover, .close-icon:hover {
+    color: #e50914;
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    transition: width 0.3s, opacity 0.3s;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #bbb;
+}
+
+.close-icon {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.search-input.active {
+    width: 200px;
+    opacity: 1;
+}
+
+.close-icon.active {
+    display: block;
+}
+
+.search-icon.inactive {
+    display: none;
+}
+
+.navbar__icons a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar__icons a:hover {
+    color: #e50914;
+}
+
+.navbar__icons img {
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .navbar__links {
+        display: none; 
+    }
+    .navbar__icons {
+        gap: 10px;
+    }
+
+    .search-input.active {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar__logo img {
+        height: 25px;
+    }
+
+    .search-input.active {
+        width: 120px;
+    }
+}
