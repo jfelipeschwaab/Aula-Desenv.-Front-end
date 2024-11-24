@@ -147,3 +147,32 @@ body {
         width: 120px;
     }
 }
+
+body {
+    background-color: #141414;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #141414;
+}
+
+.carousel img {
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.carousel img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Torna as setas brancas visíveis */
+}

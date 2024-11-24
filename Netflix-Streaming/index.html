@@ -4,52 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barra de Navegação da Netflix com Pesquisa</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__logo">
-            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo"></a>
-        </div>
-        <ul class="navbar__links">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Séries</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Novidades Populares</a></li>
-            <li><a href="#">Minha Lista</a></li>
-        </ul>
-        <div class="navbar__icons">
-            <div class="search-container">
-                <i class="fas fa-search search-icon" id="search-icon"></i>
-                <input type="text" class="search-input" id="search-input" placeholder="Título, pessoa, gênero...">
-                <i class="fas fa-times close-icon" id="close-icon"></i>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Séries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Novidades Populares</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Minha Lista</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="me-3 position-relative">
+                        <i class="fas fa-search fa-lg" id="search-icon" style="cursor: pointer;"></i>
+                        <input type="text" class="form-control position-absolute top-100 start-50 translate-middle-x mt-2 w-100 d-none" 
+                            id="search-input" placeholder="Título, pessoa, gênero...">
+                        <i class="fas fa-times fa-lg position-absolute top-0 end-0 mt-2 me-2 d-none" 
+                            id="close-icon" style="cursor: pointer;"></i>
+                    </div>
+                    <a href="#" class="me-3"><i class="fas fa-bell fa-lg"></i></a>
+                    <a href="#"><img src="https://via.placeholder.com/30" alt="Perfil" class="rounded-circle"></a>
+                </div>
             </div>
-            <a href="#"><i class="fas fa-bell"></i></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Perfil"></a>
         </div>
     </nav>
 
-    <div style="margin-top: 60px; padding: 20px;">
-        <h1>Bem-vindo ao meu Netflix Clone</h1>
+    <div style="margin-top: 80px; padding: 20px;">
+        <h1 class="text-white">Bem-vindo ao meu Netflix Clone</h1>
     </div>
 
+    <!-- Seção "Em Alta" -->
+    <div class="container my-5">
+        <h2 class="text-white mb-4">Em Alta</h2>
+        <div id="carouselEmAlta" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+1" class="d-block w-100" alt="Filme 1">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+2" class="d-block w-100" alt="Filme 2">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+3" class="d-block w-100" alt="Filme 3">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+4" class="d-block w-100" alt="Filme 4">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+5" class="d-block w-100" alt="Filme 5">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+6" class="d-block w-100" alt="Filme 6">
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais .carousel-item conforme necessário -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmAlta" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEmAlta" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Seção "Recomendados para Você" -->
+    <div class="container my-5">
+        <h2 class="text-white mb-4">Recomendados para Você</h2>
+        <div id="carouselRecomendados" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+A" class="d-block w-100" alt="Filme A">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+B" class="d-block w-100" alt="Filme B">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+C" class="d-block w-100" alt="Filme C">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+D" class="d-block w-100" alt="Filme D">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+E" class="d-block w-100" alt="Filme E">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/200x300?text=Filme+F" class="d-block w-100" alt="Filme F">
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais .carousel-item conforme necessário -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRecomendados" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselRecomendados" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script para a funcionalidade de busca -->
     <script>
         const searchIcon = document.getElementById('search-icon');
         const closeIcon = document.getElementById('close-icon');
         const searchInput = document.getElementById('search-input');
 
         searchIcon.addEventListener('click', () => {
-            searchInput.classList.add('active');
-            closeIcon.classList.add('active');
-            searchIcon.classList.add('inactive');
+            searchInput.classList.remove('d-none');
+            closeIcon.classList.remove('d-none');
+            searchIcon.classList.add('d-none');
             searchInput.focus();
         });
 
         closeIcon.addEventListener('click', () => {
-            searchInput.classList.remove('active');
-            closeIcon.classList.remove('active');
-            searchIcon.classList.remove('inactive');
+            searchInput.classList.add('d-none');
+            closeIcon.classList.add('d-none');
+            searchIcon.classList.remove('d-none');
             searchInput.value = '';
         });
     </script>
